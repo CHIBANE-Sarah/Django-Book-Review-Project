@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }}</title>
+</head>
+
+<body>
+
+    <h1>{{ book.title }}</h1>
+    <p><strong>Éditeur: </strong>{{ book.publisher}}</p>
+    <p><strong>Année: </strong>{{ book.year }}</p>
+    <p><strong>ISBN: </strong>{{book.isbn }}</p>
+    <p><strong>Résumé:</strong>{{ book.backCover }}</p>
+    <p><strong>Image disponible: </strong>{{ book.cove }}</p>
+
+    <p><a href="/book/">Retour à la liste de livres</a></p>
+
+</body>
+
+</html>

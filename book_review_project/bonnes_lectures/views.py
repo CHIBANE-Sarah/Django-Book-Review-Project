@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Book
 
-# Create your views here.
 def about(request):
     return render(request, 'about.html')
 
@@ -11,3 +10,7 @@ def welcome(request):
 def book_list(request):
     books = Book.objects.all().order_by('title')
     return render(request, 'book_list.html', {'books': books})
+
+def book_detail(request, id):
+    book = Book.objects.get(id = id)
+    return render(request, 'book_detail.html', {'book': book})
