@@ -1,0 +1,18 @@
+services:
+ base:
+  build:
+    context: .
+    no_cache: true
+    dockerfile: Dockerfile_tp2
+    args:
+      USERNAME:            # À compléter
+      USERID:              # À compléter 
+  container_name: fw1-tp2-${USERNAME}
+  command: /bin/bash
+  tty: true
+  volumes:
+  - .:/home/user/workspace
+  ports:
+  - "8080:8080"
+  environment:
+    PS1: "[ $$(whoami) | \\w ] "
