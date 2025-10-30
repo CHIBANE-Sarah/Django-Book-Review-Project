@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Liste des livres</title>
+</head>
+
+<body>
+    <h1>Liste des livres</h1>
+
+    {% if books %}
+    <ul>
+        {% for book in books %}
+        <li>{{ book.title }} - {{ book.publisher }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Aucun livre en base.</p>
+    {% endif %}
+</body>
+
+</html>
